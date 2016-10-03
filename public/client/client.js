@@ -14,5 +14,4 @@ socket.on('color', function (data) {
  });
 
 window.onload = function () {
-  console.log('client-side working')
 }
