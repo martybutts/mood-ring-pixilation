@@ -21,11 +21,13 @@
   "homepage": "https://github.com/martybutts/mood-ring-pixilation#readme",
   "dependencies": {
     "browserify": "^13.1.0",
+    "clean-this-tweet-up": "^1.0.2",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "nodemon": "^1.10.2",
     "sentiment": "^2.0.0",
     "socket.io": "^1.4.8",
+    "superagent": "^2.3.0",
     "twitter": "^1.4.0",
     "watchify": "^3.7.0"
   }
