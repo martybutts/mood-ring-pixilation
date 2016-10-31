@@ -9,16 +9,17 @@ var io = require('socket.io')(http);
 
 var routes = require('./routes/index');
 
-app.get('/channel/:name', (req, res) => {
-  var channel = req.params.name
-
-  var nsp = io.of(`/${channel}`);
-
-  nsp.on('connection', function(socket){
-    console.log('someone connected')
-  });
-  nsp.emit('hi', 'everyone!');
-})
+//Working with namespaces
+// app.get('/channel/:name', (req, res) => {
+//   var channel = req.params.name
+//
+//   var nsp = io.of(`/${channel}`);
+//
+//   nsp.on('connection', function(socket){
+//     console.log('someone connected')
+//   });
+//   nsp.emit('hi', 'everyone!');
+// })
 
 //server setup
 
