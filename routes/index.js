@@ -35,10 +35,10 @@ console.log('')
 }
 
 module.exports = function (io) {
-  // get data from twitter
 
+  // get data from twitter
   io.on('connection', function (socket) {
-    var stream = client.stream('statuses/filter', {language: 'en', track: 'Donald Trump'});
+    var stream = client.stream('statuses/filter', {language: 'en', track: 'bananas'});
 
     stream.on('data', function(event) {
       var score = extractScore(event)
