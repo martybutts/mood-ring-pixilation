@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "watchify public/client/*.js -o public/bundle.js -dv", 
+    "build": "watchify public/client/*.js -o public/bundle.js -dv",
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
