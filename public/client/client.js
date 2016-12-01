@@ -6,14 +6,15 @@ socket.on('connect', function () {
 })
 
 socket.on('color', function (data) {
+  console.log('data', data)
 
   const { rgb } = data
 
-  div.style.backgroundColor = 'rgb(' + [rgb[0], rgb[1], rgb[2]].join(',') + ')';
+  div.style.backgroundColor = 'rgb(' + [rgb[0], rgb[1], rgb[2]].join(',') + ')'
   if (div.nextElementSibling) {
-    div = div.nextElementSibling;
+    div = div.nextElementSibling
   }
   else {
-   div = div.parentElement.children[0];
+   div = div.parentElement.children[0]
  }
-});
+})
