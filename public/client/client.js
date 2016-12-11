@@ -1,5 +1,5 @@
 var socket = io()
-const div = document.querySelector(".row>div"); // selects the first div
+const div = document.getElementsByTagName("div"); // selects the first div
 
 socket.on('connect', function () {
   console.log("socket on");
