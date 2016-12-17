@@ -1,5 +1,5 @@
 var socket = io()
-let div = document.getElementsByTagName("div")[0]; // selects the first div
+let div = document.querySelector(".row>div"); // selects the first div
 
 socket.on('connect', function () {
   console.log("socket on");
@@ -8,13 +8,13 @@ socket.on('connect', function () {
 socket.on('color', function (data) {
   console.log('data', data)
 
-  const { rgb } = data
+  var { rgb } = data
   // change the color of the div
   div.style.backgroundColor = 'rgb(' + [rgb[0], rgb[1], rgb[2]].join(',') + ')'
-  while (div) // if a div is not last, move to the next one
+  if (div.nextElementSibling) // if a div is not last, move to the next one
     div = div.nextElementSibling
 
-  // else // if the div is last move to the first one
-  //  div = div.parentElement.children[0]
+  else // if the div is last move to the first one
+   div = div.parentElement.children[0]
 
 })
