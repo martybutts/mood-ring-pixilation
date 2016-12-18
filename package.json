@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "watchify public/client/*.js -o public/bundle.js -dv",
+    "build": "NODE_ENV=production browserify public/client/*.js -o public/bundle.js -dv",
     "start": "nodemon server.js",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/martybutts/mood-ring-pixilation/issues"
+  },
+  "engines": {
+    "node": "6.4.0"
   },
   "homepage": "https://github.com/martybutts/mood-ring-pixilation#readme",
   "dependencies": {
